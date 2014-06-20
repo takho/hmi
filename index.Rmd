@@ -30,10 +30,26 @@ Meaning of BMI
 --- .class #id 
 
 ## How to use the BMI Calculator
-1. On the side bar of the application, user can entire weight, height and the unit i either imperial or metric systems (ie lb vs Kg,  inch vs cm)
+1. On the side bar of the application, user can entire weight, height and the unit in either imperial or metric systems (ie lb vs Kg,  inch vs cm)
 2. The app will do the conversion of the unit and calculate the BMI index
 3. Based on the index, it will display comment of the weight status (obese, overweight etc)
 
 
+--- .class #id 
+
+## Interface to the Calculator
+
+1. It is implementation with some form function
+- user can enter numeric data and use the drop down box to select which measurement system
+- either in Kg or lb
+- either in inch or cm
+- you can choose a combination of anything , eg body weight in lb and height in cm
+
+--- .class #id 
+
+## Implementation details.
+1.  Data collected through the input
+2.  It is converted in the server.R to the common unit, so calculation can be made with one common formula.  (This is in the function BMI)
+3.  Another function in server.R is msg which will take the BMI value and display the comment about weight status (obese, overweigt etc)
 
 
