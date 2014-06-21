@@ -13,7 +13,8 @@ knit        : slidify::knit2slides
 
 ## Introduction
 
-Body Mass Index is an index used by health professionals to gauage your general body weight/Fat Mass.  It is derived by the following formula
+This document is produced by Slidify (the next slide will show some cool interactive graph produced using R)
+Body Mass Index is an index used by health professionals to guage your general body weight/Fat Mass.  It is derived by the following formula
 
           BMI =  Body weight (in Kg) / (Height in meter)^2
         
@@ -29,27 +30,32 @@ Meaning of BMI
 
 --- .class #id 
 
+
+
 ## How to use the BMI Calculator
 1. On the side bar of the application, user can entire weight, height and the unit in either imperial or metric systems (ie lb vs Kg,  inch vs cm)
 2. The app will do the conversion of the unit and calculate the BMI index
 3. Based on the index, it will display comment of the weight status (obese, overweight etc)
 
+--- .class #id
 
---- .class #id 
-
-## Interface to the Calculator
-
-1. It is implementation with some form function
-- user can enter numeric data and use the drop down box to select which measurement system
-- either in Kg or lb
-- either in inch or cm
-- you can choose a combination of anything , eg body weight in lb and height in cm
-
---- .class #id 
 
 ## Implementation details.
-1.  Data collected through the input
-2.  It is converted in the server.R to the common unit, so calculation can be made with one common formula.  (This is in the function BMI)
-3.  Another function in server.R is msg which will take the BMI value and display the comment about weight status (obese, overweigt etc)
 
+1. It is implementation with some form function
+  - user can enter numeric data and use the drop down box to select which measurement system
+  - either in Kg or lb
+  - either in inch or cm
+  - you can choose a combination of anything , eg body weight in lb and height in cm
+
+2.  Data collected through the input
+3.  It is converted in the server.R to the common unit, so calculation can be made with one common formula.  (This is in the function BMI)
+4.  Another function in server.R is msg which will take the BMI value and display the comment about weight status (obese, overweigt etc)
+
+--- .class #id 
+## Demonstrate how R code can be run interactively in slidified document
+```{r  fig.width=8, fig.height=6}
+data(mtcars)
+pairs(mtcars, panel=panel.smooth)
+```
 

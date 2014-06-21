@@ -45,7 +45,8 @@
     <h2>Introduction</h2>
   </hgroup>
   <article data-timings="">
-    <p>Body Mass Index is an index used by health professionals to gauage your general body weight/Fat Mass.  It is derived by the following formula</p>
+    <p>This document is produced by Slidify (the next slide will show some cool interactive graph produced using R)
+Body Mass Index is an index used by health professionals to guage your general body weight/Fat Mass.  It is derived by the following formula</p>
 
 <pre><code>      BMI =  Body weight (in Kg) / (Height in meter)^2
 </code></pre>
@@ -82,15 +83,21 @@
 
 <slide class="class" id="id" style="background:;">
   <hgroup>
-    <h2>Interface to the Calculator</h2>
+    <h2>Implementation details.</h2>
   </hgroup>
   <article data-timings="">
     <ol>
-<li>It is implementation with some form function</li>
+<li><p>It is implementation with some form function</p>
+
+<ul>
 <li>user can enter numeric data and use the drop down box to select which measurement system</li>
 <li>either in Kg or lb</li>
 <li>either in inch or cm</li>
 <li>you can choose a combination of anything , eg body weight in lb and height in cm</li>
+</ul></li>
+<li><p>Data collected through the input</p></li>
+<li><p>It is converted in the server.R to the common unit, so calculation can be made with one common formula.  (This is in the function BMI)</p></li>
+<li><p>Another function in server.R is msg which will take the BMI value and display the comment about weight status (obese, overweigt etc)</p></li>
 </ol>
 
   </article>
@@ -99,14 +106,14 @@
 
 <slide class="class" id="id" style="background:;">
   <hgroup>
-    <h2>Implementation details.</h2>
+    <h2>Demonstrate how R code can be run interactively in slidified document</h2>
   </hgroup>
   <article data-timings="">
-    <ol>
-<li> Data collected through the input</li>
-<li> It is converted in the server.R to the common unit, so calculation can be made with one common formula.  (This is in the function BMI)</li>
-<li> Another function in server.R is msg which will take the BMI value and display the comment about weight status (obese, overweigt etc)</li>
-</ol>
+    <pre><code class="r">data(mtcars)
+pairs(mtcars, panel = panel.smooth)
+</code></pre>
+
+<p><img src="figure/unnamed-chunk-1.png" alt="plot of chunk unnamed-chunk-1"> </p>
 
   </article>
   <!-- Presenter Notes -->
@@ -130,13 +137,13 @@
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='Interface to the Calculator'>
+        data-slide=3 title='Implementation details.'>
          3
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title='Implementation details.'>
+        data-slide=4 title='Demonstrate how R code can be run interactively in slidified document'>
          4
       </a>
     </li>
